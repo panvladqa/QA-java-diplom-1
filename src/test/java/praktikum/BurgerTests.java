@@ -53,7 +53,7 @@ public class BurgerTests {
      * Проверяет корректность перемещения ингредиента в списке
      */
     @Test
-    public void moveIngredient_WhenCalled_MovesIngredientToNewPosition() {
+    public void moveIngredientWhenCalledMovesIngredientToNewPosition() {
         Mockito.when(ingredient.getName()).thenReturn("ingredientName");
 
         Burger burger = new Burger();
@@ -75,7 +75,7 @@ public class BurgerTests {
      * Проверяет корректность удаления ингредиента из бургера
      */
     @Test
-    public void removeIngredient_WhenCalled_RemovesIngredientFromBurger() {
+    public void removeIngredientWhenCalledRemovesIngredientFromBurger() {
         Burger burger = new Burger();
         burger.addIngredient(ingredient);
 
@@ -92,7 +92,7 @@ public class BurgerTests {
      * Проверяет корректность расчета цены бургера
      */
     @Test
-    public void getPrice_WhenCalled_ReturnsCorrectTotalPrice() {
+    public void getPriceWhenCalledReturnsCorrectTotalPrice() {
         Mockito.when(bun.getPrice()).thenReturn(100f);
         Mockito.when(ingredient.getPrice()).thenReturn(250f);
 
@@ -112,7 +112,7 @@ public class BurgerTests {
      * Проверяет корректность генерации рецепта бургера
      */
     @Test
-    public void getReceipt_WhenCalled_ReturnsProperlyFormattedReceipt() {
+    public void getReceiptWhenCalledReturnsProperlyFormattedReceipt() {
         Mockito.when(bun.getName()).thenReturn("bunName");
         Mockito.when(bun.getPrice()).thenReturn(80f);
         Mockito.when(ingredient.getName()).thenReturn("ingredientName");
