@@ -25,7 +25,7 @@ public class IngredientTests {
      * Проверяет, что метод getPrice() возвращает корректную цену ингредиента
      */
     @Test
-    public void getPriceWhenCalledReturnsCorrectPrice() {
+    public void testGetPriceWhenCalledReturnsCorrectPrice() {
         MatcherAssert.assertThat(
                 "Цена ингредиента должна соответствовать значению, установленному в конструкторе",
                 ingredient.getPrice(),
@@ -37,7 +37,7 @@ public class IngredientTests {
      * Проверяет, что метод getName() возвращает корректное название ингредиента
      */
     @Test
-    public void getNameWhenCalledReturnsCorrectName() {
+    public void testGetNameWhenCalledReturnsCorrectName() {
         MatcherAssert.assertThat(
                 "Название ингредиента должно соответствовать значению, установленному в конструкторе",
                 ingredient.getName(),
@@ -49,7 +49,7 @@ public class IngredientTests {
      * Проверяет, что метод getType() возвращает корректный тип ингредиента,
      */
     @Test
-    public void getTypeWhenCalledReturnsCorrectType() {
+    public void testGetTypeWhenCalledReturnsCorrectType() {
         MatcherAssert.assertThat(
                 "Тип ингредиента должен соответствовать значению, установленному в конструкторе",
                 ingredient.getType(),

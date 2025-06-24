@@ -23,7 +23,7 @@ public class BurgerTests {
      * Проверяет корректность установки булочек в бургер
      */
     @Test
-    public void setBunsWhenCalledSetsBunsCorrectly() {
+    public void testSetBunsWhenCalledSetsBunsCorrectly() {
         Burger burger = new Burger();
         Mockito.when(bun.getName()).thenReturn("bunName");
         burger.setBuns(bun);
@@ -39,7 +39,7 @@ public class BurgerTests {
      * Проверяет корректность добавления ингредиента в бургер
      */
     @Test
-    public void addIngredientWhenCalledAddsIngredientToBurger() {
+    public void testAddIngredientWhenCalledAddsIngredientToBurger() {
         Burger burger = new Burger();
         burger.addIngredient(ingredient);
 
@@ -53,7 +53,7 @@ public class BurgerTests {
      * Проверяет корректность перемещения ингредиента в списке
      */
     @Test
-    public void moveIngredientWhenCalledMovesIngredientToNewPosition() {
+    public void testMoveIngredientWhenCalledMovesIngredientToNewPosition() {
         Mockito.when(ingredient.getName()).thenReturn("ingredientName");
 
         Burger burger = new Burger();
@@ -75,7 +75,7 @@ public class BurgerTests {
      * Проверяет корректность удаления ингредиента из бургера
      */
     @Test
-    public void removeIngredientWhenCalledRemovesIngredientFromBurger() {
+    public void testRemoveIngredientWhenCalledRemovesIngredientFromBurger() {
         Burger burger = new Burger();
         burger.addIngredient(ingredient);
 
@@ -92,7 +92,7 @@ public class BurgerTests {
      * Проверяет корректность расчета цены бургера
      */
     @Test
-    public void getPriceWhenCalledReturnsCorrectTotalPrice() {
+    public void testGetPriceWhenCalledReturnsCorrectTotalPrice() {
         Mockito.when(bun.getPrice()).thenReturn(100f);
         Mockito.when(ingredient.getPrice()).thenReturn(250f);
 
@@ -112,7 +112,7 @@ public class BurgerTests {
      * Проверяет корректность генерации рецепта бургера
      */
     @Test
-    public void getReceiptWhenCalledReturnsProperlyFormattedReceipt() {
+    public void testGetReceiptWhenCalledReturnsProperlyFormattedReceipt() {
         Mockito.when(bun.getName()).thenReturn("bunName");
         Mockito.when(bun.getPrice()).thenReturn(80f);
         Mockito.when(ingredient.getName()).thenReturn("ingredientName");
@@ -132,7 +132,6 @@ public class BurgerTests {
         burger.setBuns(bun);
         burger.addIngredient(ingredient);
 
-        // Нормализуем переводы строк для сравнения
         String normalizedExpected = expectedReceipt.replace("\r\n", "\n").replace("\r", "\n");
         String normalizedActual = burger.getReceipt().replace("\r\n", "\n").replace("\r", "\n");
 

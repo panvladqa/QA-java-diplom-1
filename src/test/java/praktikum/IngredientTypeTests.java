@@ -33,7 +33,7 @@ public class IngredientTypeTests {
      * Проверяет, что все объявленные типы ингредиентов корректно определены в перечислении
      */
     @Test
-    public void valueOfForAllDeclaredTypesShouldReturnCorrectEnumValue() {
+    public void testValueOfForAllDeclaredTypesShouldReturnCorrectEnumValue() {
         MatcherAssert.assertThat(
                 "Тип ингредиента " + expectedTypeName + " должен быть корректно определен в перечислении",
                 IngredientType.valueOf(expectedTypeName).name(),

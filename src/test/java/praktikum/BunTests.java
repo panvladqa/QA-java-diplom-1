@@ -11,7 +11,7 @@ public class BunTests {
      * Проверяет, что метод getName() возвращает корректное название булочки
      */
     @Test
-    public void getNameWhenBunCreatedReturnsCorrectName() {
+    public void testGetNameWhenBunCreatedReturnsCorrectName() {
         String bunName = "bunName";
         Bun bun = new Bun(bunName, 100);
 
@@ -26,7 +26,7 @@ public class BunTests {
      * Проверяет, что метод getPrice() возвращает корректную цену булочки
      */
     @Test
-    public void getPriceWhenBunCreatedReturnsCorrectPrice() {
+    public void testGetPriceWhenBunCreatedReturnsCorrectPrice() {
         float bunPrice = 100;
         Bun bun = new Bun("bunName", bunPrice);
 
