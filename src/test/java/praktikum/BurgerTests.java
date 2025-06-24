@@ -23,7 +23,7 @@ public class BurgerTests {
      * Проверяет корректность установки булочек в бургер
      */
     @Test
-    public void setBuns_WhenCalled_SetsBunsCorrectly() {
+    public void setBunsWhenCalledSetsBunsCorrectly() {
         Burger burger = new Burger();
         Mockito.when(bun.getName()).thenReturn("bunName");
         burger.setBuns(bun);
@@ -39,7 +39,7 @@ public class BurgerTests {
      * Проверяет корректность добавления ингредиента в бургер
      */
     @Test
-    public void addIngredient_WhenCalled_AddsIngredientToBurger() {
+    public void addIngredientWhenCalledAddsIngredientToBurger() {
         Burger burger = new Burger();
         burger.addIngredient(ingredient);
 
